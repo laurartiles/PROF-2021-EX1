@@ -23,6 +23,8 @@ public class LibraryTest {
 		System.out.println("Ejecuto test");
 	}
 	
+	//Test de addBook
+	
 	@Test
 	@DisplayName("añado un libro")
 	public void addBook_Test() throws DuplicatedBookException, NonExistingBookException, EmptyLibraryException {
@@ -68,6 +70,8 @@ public class LibraryTest {
 		});
 	}
 	
+	//Test de removeBook
+	
 	@Test
 	@DisplayName(" elimino un libro de la libreria ")
 	public void removeBook_test() throws DuplicatedBookException, NonExistingBookException, EmptyLibraryException {
@@ -100,6 +104,8 @@ public class LibraryTest {
 		});
 	}
 	
+	//Test de getBook
+	
 	@Test
 	@DisplayName(" localizo libro en libreria vacia. Salta exception ")
 	public void getBook_Empty_Test() {
@@ -112,7 +118,7 @@ public class LibraryTest {
 	}
 	
 	@Test
-	@DisplayName(" busco un libro que no está ")
+	@DisplayName(" busco un libro que no está. Salta excepción")
 	public void getBook_NonExisting_Test() {
 		
 		Library library = new Library();
